@@ -1,7 +1,7 @@
 {
   "name": "crypto-containers",
   "version": "1.0.0",
-  "description": "Create and manage crypto containers by using Shamir's Secret Sharing algorithm",
+  "description": "JavaScript library to encrypt plain text or raw data into a crypto container and decrypt crypto container with randomly generated an encryption key. Encryption and decryption derive by reassembling encryption key which was split into shares by Shamir's Secret Sharing algorithm.",
   "main": "lib/cryptoContainers.js",
   "scripts": {
     "build": "webpack --env dev && webpack --env build",
@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MariKiev/k2l-js-lib.git"
+    "url": "https://github.com/Key2Lyf/crypto-containers.git"
   },
   "author": "Maryna Beskorovaina",
   "license": "MIT",
-  "homepage": "https://github.com/MariKiev/k2l-js-lib",
+  "homepage": "https://github.com/Key2Lyf/crypto-containers",
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.51",
     "@babel/core": "^7.0.0-beta.51",

@@ -1,7 +1,7 @@
 # crypto-containers
 JavaScript library to encrypt plain text or raw data into a crypto container and decrypt crypto container with randomly generated an encryption key. Encryption and decryption derive by reassembling encryption key which was split into shares by [Shamir's Secret Sharing algorithm](http://en.wikipedia.org/wiki/Shamir's_Secret_Sharing).
 
-## What is it?
+## What you can do with it?
 The crypto-containers library allows you to encrypt and decrypt any information. We use this library in Key2Lyf production as a secure way to split access and storing any sensitive information.
 
 ## Usage
@@ -81,6 +81,6 @@ Please send pull requests for bug fixes, code optimization, and ideas for improv
 
 ## License
 
-Code released under [the MIT license](https://github.com/MariKiev/k2l-js-lib/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/Key2Lyf/crypto-containers/blob/master/LICENSE).
 
 Copyright 2018 Key2Lyf
