@@ -1,0 +1,43 @@
+{
+  "name": "crypto-containers",
+  "version": "1.0.0",
+  "description": "Create and manage crypto containers by using Shamir's Secret Sharing algorithm",
+  "main": "lib/cryptoContainers.js",
+  "scripts": {
+    "build": "webpack --env dev && webpack --env build",
+    "dev": "webpack --progress --colors --watch --env dev",
+    "test": "mocha --require babel-register --colors ./test/*.spec.js",
+    "test:watch": "mocha --require babel-register --colors -w ./test/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MariKiev/k2l-js-lib.git"
+  },
+  "author": "Maryna Beskorovaina",
+  "license": "MIT",
+  "homepage": "https://github.com/MariKiev/k2l-js-lib",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.51",
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "babel-eslint": "^8.0.3",
+    "babel-loader": "^8.0.0-beta.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^7.0.0-beta.3",
+    "babel-register": "^7.0.0-beta.3",
+    "chai": "^4.1.2",
+    "eslint": "^5.6.1",
+    "eslint-loader": "^2.1.1",
+    "jsdom": "11.11.0",
+    "jsdom-global": "3.0.2",
+    "mocha": "^4.0.1",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.12.2",
+    "webpack-cli": "^3.0.8",
+    "yargs": "^10.0.3"
+  },
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "secrets.js": "^0.1.8"
+  }
+}
