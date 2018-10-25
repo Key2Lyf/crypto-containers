@@ -11,7 +11,7 @@ To use it in node.js:
   npm install crypto-containers
   ```
 	
- var cryptoContainers = require('cryptoContainers.js');
+ var cryptoContainers = require('crypto-containers');
 	
 To use it in the browser, include *cryptoContainers.js* or *cryptoContainers.min.js* (minified using Google Closure Compiler)
 

@@ -27,7 +27,7 @@ build/Release
 node_modules
 
 # Remove some common IDE working directories
-.idea/*
+.idea
 .vscode
 
 .DS_Store
