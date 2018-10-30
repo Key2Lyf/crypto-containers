@@ -1,5 +1,6 @@
 const CryptoJS = require('crypto-js');
 const secrets = require('secrets.js');
+const crypto = require('crypto');
 
 function dec2hex(dec) {
   // Generate random string/characters
@@ -15,10 +16,18 @@ function hashData(data, salt) {
 
 function generateId(len) {
   // generateId :: Integer -> String
+
+  if (typeof window === 'undefined') {
+    const buf = crypto.randomBytes(24);
+
+    return buf.toString('hex');
+
+  }
   const arr = new Uint8Array((len || 40) / 2);
 
   window.crypto.getRandomValues(arr);
   return Array.from(arr, dec2hex).join('');
+
 }
 
 function generateKey() {
