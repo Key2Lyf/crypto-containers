@@ -4,10 +4,8 @@
   "description": "JavaScript library to encrypt plain text or raw data into a crypto container and decrypt crypto container with randomly generated an encryption key. Encryption and decryption derive by reassembling encryption key which was split into shares by Shamir's Secret Sharing algorithm.",
   "main": "lib/cryptoContainers.js",
   "scripts": {
-    "build": "webpack --env dev && webpack --env build && npm run test",
-    "dev": "webpack --progress --colors --watch --env dev",
-    "test": "mocha --require babel-register --colors ./test/*.spec.js",
-    "test:watch": "mocha --require babel-register --colors -w ./test/*.spec.js"
+    "build": "webpack --env dev && webpack --env build",
+    "dev": "webpack --progress --colors --watch --env dev"
   },
   "repository": {
     "type": "git",
