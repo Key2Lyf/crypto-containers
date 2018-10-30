@@ -7,6 +7,12 @@ function dec2hex(dec) {
   return ('0' + dec.toString(16)).substr(-2);
 }
 
+function hashData(data, salt) {
+  const hashedData = CryptoJS.HmacSHA256(data, salt);
+
+  return hashedData.toString(CryptoJS.enc.Hex);
+}
+
 function generateId(len) {
   // generateId :: Integer -> String
   const arr = new Uint8Array((len || 40) / 2);
@@ -28,13 +34,9 @@ function generateKey() {
   const userShare = shares[1];
   const salt = generateId(8);
 
-  // hashing of the encryption key
-  const encryptionKeyHash = CryptoJS.HmacSHA256(encryptionKey, salt);
-  const userHashedShare = CryptoJS.HmacSHA256(userShare, salt);
-
   return {
-    encryptionKeyHash: encryptionKeyHash.toString(CryptoJS.enc.Hex),
-    userHashedShare: userHashedShare.toString(CryptoJS.enc.Hex),
+    encryptionKeyHash: hashData(encryptionKey, salt),
+    userHashedShare: hashData(userShare, salt),
     k2lShare: k2lShare,
     userShare: userShare,
     salt: salt
@@ -42,10 +44,7 @@ function generateKey() {
 }
 
 function userShareIsValid(userShare, userHashedShare, salt) {
-  // hashing of the shares
-  const userShareHash = CryptoJS.HmacSHA256(userShare, salt);
-
-  return (userShareHash.toString(CryptoJS.enc.Hex) === userHashedShare);
+  return (hashData(userShare, salt) === userHashedShare);
 }
 
 function getEncryptionKey(k2lShare, userShare, action) {
@@ -81,12 +80,11 @@ function decryptContainer(encryptedData, encryptionKey, action) {
 }
 
 function encryptionKeyIsValid(encryptionKeyHash, encryptionKey, salt) {
-  const generatedEncryptionKeyHash = CryptoJS.HmacSHA256(encryptionKey, salt);
-
-  return (generatedEncryptionKeyHash.toString(CryptoJS.enc.Hex) === encryptionKeyHash);
+  return (hashData(encryptionKey, salt) === encryptionKeyHash);
 }
 
 export {
+  hashData,
   generateKey,
   userShareIsValid,
   getEncryptionKey,
