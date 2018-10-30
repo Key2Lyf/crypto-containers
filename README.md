@@ -25,6 +25,7 @@ To use it in the browser, include *cryptoContainers.js* or *cryptoContainers.min
 * cryptoContainers.decryptContainer()
 * cryptoContainers.encryptionKeyIsValid()
 * cryptoContainers.userShareIsValid()
+* cryptoContainers.hashData()
 
 See all `Variables description` below.
 
@@ -42,8 +43,7 @@ Each item in the object is a String.
 
 
 #### cryptoContainers.getEncryptionKey( k2lShare, userShare, action )
-Reconstructs the encryption key from `k2lShare` and `userShare` shares.
-The output of `cryptoContainers.getEncryptionKey()`is an encryption key, a String.
+Reconstructs the encryption key from `k2lShare` and `userShare` shares. The output is an encryption key, a String.
 
 
 #### cryptoContainers.encryptContainer( rawData, encryptionKey, action )
@@ -55,11 +55,15 @@ Uses the encryption key to decrypt encryptedData. Returns rawData.
 
 
 #### cryptoContainers.encryptionKeyIsValid( encryptionKeyHash, encryptionKey, salt )
-Hashing an encryption key and compares given and gotten hashes of the encryption key. Returns true or false.
+Hashes the encryptionKey and compares gotten hash with encryptionKeyHash. Returns true or false.
 
 
 #### cryptoContainers.userShareIsValid( userShare, userHashedShare, salt )
-Hashing the share and compares given and gotten hashes of the share. Returns true or false.
+Hashes the userShare and compares gotten hash with userHashedShare. Returns true or false.
+
+
+#### cryptoContainers.hashData( data, salt )
+Returns hashed data.
 
 ## Variables description
 
