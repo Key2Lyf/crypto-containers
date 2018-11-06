@@ -6,14 +6,7 @@ The crypto-containers library allows you to encrypt and decrypt any information.
 
 ## Usage
 
-To use it in node.js:
-  ```
-  npm install crypto-containers
-  ```
-	
- var cryptoContainers = require('crypto-containers');
-	
-To use it in the browser, include *cryptoContainers.js* or *cryptoContainers.min.js* (minified using Google Closure Compiler)
+	To use it in the browser, include *cryptoContainers.js* or *cryptoContainers.min.js* (minified using Google Closure Compiler)
 
   <script src="cryptoContainers.min.js"></script>
   
