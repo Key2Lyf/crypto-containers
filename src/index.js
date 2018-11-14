@@ -30,7 +30,7 @@ function generateId(len) {
 
 }
 
-function generateKey() {
+function generateKey(salt) {
 
   const encryptionKey = generateId(24);
 
@@ -41,7 +41,10 @@ function generateKey() {
 
   const k2lShare = shares[0];
   const userShare = shares[1];
-  const salt = generateId(8);
+
+  if (typeof salt === 'undefined') {
+    salt = generateId(8);
+  }
 
   return {
     encryptionKeyHash: hashData(encryptionKey, salt),
