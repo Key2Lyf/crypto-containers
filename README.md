@@ -5,10 +5,9 @@ JavaScript library to encrypt plain text or raw data into a crypto container and
 The crypto-containers library allows you to encrypt and decrypt any information. We use this library in Key2Lyf production as a secure way to split access and storing any sensitive information.
 
 ## Usage
+To use it in the browser, include cryptoContainers.js or cryptoContainers.min.js in your HTML. You can find them in the `lib/ ` folder.
 
-	To use it in the browser, include *cryptoContainers.js* or *cryptoContainers.min.js* (minified using Google Closure Compiler)
-
-  <script src="cryptoContainers.min.js"></script>
+  ` <script src="cryptoContainers.min.js"></script> `
   
 
 ## API
@@ -22,8 +21,8 @@ The crypto-containers library allows you to encrypt and decrypt any information.
 
 See all `Variables description` below.
 
-#### cryptoContainers.generateKey()
-Generate a random encryption key with default length 24 symbols.
+#### cryptoContainers.generateKey( salt )
+Generate a random encryption key with default length 24 symbols. Salt is an optional argument. If salt wasn't provided random salt value will be generated.
 The output of `cryptoContainers.generateKey()` is an Object like this:
  
 ` {encryptionKeyHash: "6a8e835ed6412428e3bf1347a85d3f37c65777d36fe2ce59f7b082ef85fbe29a", 
