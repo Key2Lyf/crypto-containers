@@ -9,6 +9,8 @@ To use it in the browser, include cryptoContainers.js or cryptoContainers.min.js
 
   ` <script src="cryptoContainers.min.js"></script> `
   
+To build minified file: ` npm run build `
+  
 
 ## API
 * cryptoContainers.generateKey()
