@@ -30,7 +30,7 @@
     "babel-preset-env": "^7.0.0-beta.3",
     "babel-register": "^7.0.0-beta.3",
     "chai": "^4.2.0",
-    "eslint": "^5.7.0",
+    "eslint": "^5.16.0",
     "eslint-loader": "^2.1.1",
     "jsdom": "11.11.0",
     "jsdom-global": "3.0.2",
@@ -41,6 +41,8 @@
     "yargs": "^10.0.3"
   },
   "dependencies": {
+    "acorn": "^6.1.1",
+    "acorn-jsx": "^5.0.1",
     "crypto-js": "^3.1.9-1",
     "secrets.js": "^0.1.8"
   }
